@@ -16,11 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: ElevatedButton(
             onPressed: () async {
-              // await SQLDatabase.instance.insertData();
-
-              await copyPath(
-                  sourceFilePath:
-                      '/data/user/0/com.example.sql_demo/databases/shoes.db');
+              await SQLDatabase.instance.insertData();
             },
             child: Text("Tap")),
       ),
