@@ -10,8 +10,8 @@ Future<Uint8List> assetstoFile({
   final tempPath = '${tempDir.path}/${fileName.split('/').last}';
   final byteData = await rootBundle.load(fileName);
   File file = File(tempPath);
-  await file.writeAsBytes(byteData.buffer.asUint8List());
-  return byteData.buffer.asUint8List();
+  File files = await file.writeAsBytes(byteData.buffer.asUint8List());
+  return files.readAsBytesSync();
 }
 
 copyPath({

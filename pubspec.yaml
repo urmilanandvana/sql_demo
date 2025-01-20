@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   path_provider: 
   sqflite: 
+  get: 
 
 dev_dependencies:
   flutter_test:
@@ -75,10 +76,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: neometric
+      fonts:
+        - asset: assets/fonts/neometric_extra_bold.otf
+        - asset: assets/fonts/neometric_heavy.otf
+        - asset: assets/fonts/neometric_medium.otf
+        - asset: assets/fonts/neometric-regular.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

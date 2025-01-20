@@ -1,13 +1,17 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:sql_demo/component/fun_cmp.dart';
+import 'package:sql_demo/model/product_model.dart';
 
 class SQLDatabase {
   static final SQLDatabase instance = SQLDatabase._instance();
   static Database? _database;
+
+  static String tableName = 'product';
 
   SQLDatabase._instance();
 
@@ -36,21 +40,32 @@ class SQLDatabase {
       path,
       version: 1,
       onCreate: (db, version) {
-        db.execute('''
-      CREATE TABLE IF NOT EXISTS product (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        image BLOB NOT NULL,
-        price TEXT,
-        rating TEXT,
-        likeStatus TEXT,
-        created_at TEXT NOT NULL, 
-        updated_at TEXT NOT NULL 
-      )''');
+        // db.execute('''
+        // CREATE TABLE IF NOT EXISTS $tableName (
+        //   id INTEGER PRIMARY KEY AUTOINCREMENT,
+        //   name TEXT NOT NULL,
+        //   image BLOB NOT NULL,
+        //   price TEXT,
+        //   rating TEXT,
+        //   likeStatus TEXT,
+        //   created_at TEXT NOT NULL,
+        //   updated_at TEXT NOT NULL
+        // )''');
       },
     );
   }
 
-  insertData() async {}
+  Future<List<ProductModel>> getDbData() async {
+    var list = [];
+    final String query = 'SELECT * FROM $tableName'; // Fetch specific columns
+
+    list = await _database!.rawQuery(query).catchError((e) {
+      print("------------------------->e ---------->${e}");
+    });
+
+    print("-----------list----------->${list.length}");
+    return List.generate(list.length, (i) {
+      return ProductModel.fromJson(list[i]);
+    });
+  }
 }
-// SQLDatabase sqlDatabase = SQLDatabase();

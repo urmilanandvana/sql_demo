@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sql_demo/db/sql_db.dart';
-import 'package:sql_demo/screen/home_screen.dart';
+import 'package:sql_demo/screen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,8 +15,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
+    return GetMaterialApp(
+      theme: ThemeData(fontFamily: 'neometric'),
+      home: SplashScreen(),
     );
   }
 }
