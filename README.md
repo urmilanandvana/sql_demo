@@ -11,7 +11,7 @@ Here are some screenshots showing the app's interface:
    ![Splash Screen](https://ibb.co/gTv7GTk)
 
 2. **Home Screen**  
-   ![Home Screen](https://i.postimg.cc/4yfwS3TW/Whats-App-Image-2025-01-22-at-2-37-21-PM-1.jpg) 
+   ![Home Screen](https://freeimage.host/i/2iglDua) 
    ![Home Screen](https://ibb.co/wNcfbrc) 
    ![Home Screen](https://ibb.co/0FrVyLq) 
 
