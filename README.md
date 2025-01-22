@@ -8,12 +8,12 @@
 Here are some screenshots showing the app's interface:
 
 1. **Splash Screen**  
-   ![Splash Screen](https://ibb.co/gTv7GTk)
+   ![Splash Screen](https://i.postimg.cc/0NGY1qnF/Whats-App-Image-2025-01-22-at-2-37-21-PM-2.jpg)
 
 2. **Home Screen**  
    ![Home Screen](https://i.postimg.cc/4yfwS3TW/Whats-App-Image-2025-01-22-at-2-37-21-PM-1.jpg) 
-   ![Home Screen](https://ibb.co/wNcfbrc) 
-   ![Home Screen](https://ibb.co/0FrVyLq) 
+   ![Home Screen](https://i.postimg.cc/DZ2q2YYZ/Whats-App-Image-2025-01-22-at-2-37-21-PM.jpg) 
+   ![Home Screen](https://i.postimg.cc/prrzj5vM/Whats-App-Image-2025-01-22-at-2-37-20-PM.jpg) 
 
 ## Installation
 
