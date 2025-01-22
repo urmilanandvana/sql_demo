@@ -1,4 +1,4 @@
-package com.example.sql_demo
+package com.shoes
 
 import io.flutter.embedding.android.FlutterActivity
 

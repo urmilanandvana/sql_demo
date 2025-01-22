@@ -9,7 +9,7 @@ void main() async {
   runApp(const MyApp());
 }
 
-// /data/user/0/com.example.sql_demo/databases/shoes.db
+// /data/user/0/com.shoes/databases/shoes.db
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
