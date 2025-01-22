@@ -68,4 +68,14 @@ class SQLDatabase {
       return ProductModel.fromJson(list[i]);
     });
   }
+
+  updateData({
+    required ProductModel productModel,
+  }) async {
+    String query = "UPDATE $tableName SET quantity = ? WHERE id = ?";
+    var result = await _database!.rawUpdate(
+        query, [productModel.quantity, productModel.id]).catchError((e) {
+      print("------------------------->e ---------->${e}");
+    });
+  }
 }

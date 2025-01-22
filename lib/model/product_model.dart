@@ -7,15 +7,17 @@ class ProductModel {
   var likeStatus;
   var createdAt;
   var updatedAt;
+  var quantity;
   ProductModel({
-    required this.id,
-    required this.name,
-    required this.image,
-    required this.price,
-    required this.rating,
-    required this.likeStatus,
-    required this.createdAt,
-    required this.updatedAt,
+    this.id,
+    this.name,
+    this.image,
+    this.price,
+    this.rating,
+    this.likeStatus,
+    this.createdAt,
+    this.updatedAt,
+    this.quantity,
   });
   factory ProductModel.fromJson(Map<String, dynamic> josn) {
     return ProductModel(
@@ -27,6 +29,7 @@ class ProductModel {
       likeStatus: josn['likeStatus'],
       createdAt: josn['created_at'],
       updatedAt: josn['updated_at'],
+      quantity: josn['quantity'],
     );
   }
 }
